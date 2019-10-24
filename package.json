@@ -1,0 +1,38 @@
+{
+  "name": "nodejin",
+  "version": "1.0.0",
+  "description": "A CLI to bootstrap node projects for quick prototyping",
+  "main": "src/index.js",
+  "bin": {
+    "nodejin": "bin/nodejin"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "node ./bin/nodejin"
+  },
+  "keywords": [
+    "cli",
+    "nodejin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^4.1.0",
+    "chalk": "^2.4.2",
+    "covgen": "^3.1.0",
+    "esm": "^3.2.25",
+    "execa": "^1.0.0",
+    "gitignore": "^0.6.0",
+    "inquirer": "^6.2.2",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^0.2.0",
+    "spdx-license-list": "^5.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ]
+}
