@@ -27,8 +27,8 @@ nodejin express --yes
 
 more templates and features currently in the works.
 
-| options       | alias | default | description                                                       |     |
-| ------------- | ----- | ------- | ----------------------------------------------------------------- | --- |
-| --git         | -g    | true    | Initilize git repository                                          |     |
-| --skipInstall | -si   | false   | Skip installing dependencies                                      |     |
-| --yes         | -y    | false   | Skip prompts and use the default options and the default template |     |
+| options       | alias | default | description                                                       |
+| ------------- | ----- | ------- | ----------------------------------------------------------------- |
+| --git         | -g    | true    | Initilize git repository                                          |
+| --skipInstall | -si   | false   | Skip installing dependencies                                      |
+| --yes         | -y    | false   | Skip prompts and use the default options and the default template |
