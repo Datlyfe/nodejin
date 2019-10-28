@@ -660,6 +660,26 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+nodejin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nodejin/-/nodejin-1.0.1.tgz#3bdb445322e197accecb58dc003cccde7a38142b"
+  integrity sha512-TbiWc8iFI6djZbJUUP3bsxfOSqxzzI+aEfZvAZHc7z1HtZkgRrrhI9iu0cMWg1H7bDIecQc/ZA9ifhXfSn4YKw==
+  dependencies:
+    arg "^4.1.0"
+    chalk "^2.4.2"
+    covgen "^3.1.0"
+    cp-file "^7.0.0"
+    ejs "^2.7.1"
+    esm "^3.2.25"
+    execa "^1.0.0"
+    gitignore "^0.6.0"
+    inquirer "^6.2.2"
+    listr "^0.14.3"
+    ncp "^2.0.0"
+    pkg-install "^0.2.0"
+    prettier "^1.18.2"
+    spdx-license-list "^5.0.0"
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"

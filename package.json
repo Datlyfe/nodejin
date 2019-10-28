@@ -1,6 +1,6 @@
 {
   "name": "nodejin",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A CLI to bootstrap node projects for quick prototyping",
   "main": "src/index.js",
   "bin": {
@@ -29,6 +29,7 @@
     "inquirer": "^6.2.2",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
+    "nodejin": "^1.0.1",
     "pkg-install": "^0.2.0",
     "prettier": "^1.18.2",
     "spdx-license-list": "^5.0.0"
