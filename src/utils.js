@@ -16,7 +16,6 @@ export const copyFiles = async (files, tmpDir, targetDir) => {
       j++
     ) {
       const blockTemplate = blockTemplates[j];
-      console.log(blockTemplate);
       if (!blockTemplate.condition || blockTemplate.condition) {
         const root = blockTemplate.path || "";
         for (let k = 0; k < blockTemplate.templates.length; k++) {

@@ -2,6 +2,8 @@
 
 ## A CLI to bootstrap node projects for quick prototyping
 
+![gitmoji-cli](nodejin.gif)
+
 ## Installation
 
 ```shell
