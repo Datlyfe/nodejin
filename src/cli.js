@@ -20,6 +20,7 @@ function parseArgumentsIntoOptions(rawArgs) {
     skipPrompts: args["--yes"] || false,
     git: args["--git"] || false,
     template: args._[0],
+    gql: false,
     skipInstall: args["--skipInstall"] || false
   };
 }
@@ -41,6 +42,15 @@ async function promptForMissingOptions(options) {
       message: "Please choose which project template to use",
       choices: ["express", "koa"],
       default: defaultTemplate
+    });
+  }
+
+  if (!options.gql) {
+    questions.push({
+      type: "confirm",
+      name: "graphql",
+      message: "graphql integration?",
+      default: false
     });
   }
 
@@ -68,6 +78,7 @@ async function promptForMissingOptions(options) {
     ...options,
     template: options.template || answers.template,
     git: options.git || answers.git,
+    gql: options.gql || answers.graphql,
     pkgManager: answers.pkgManager || "yarn"
   };
 }

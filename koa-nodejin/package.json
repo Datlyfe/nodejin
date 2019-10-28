@@ -12,6 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "koa": "^2.10.0",
+    "apollo-server-koa": "^2.9.7",
+    "graphql": "^14.5.8",
     "@koa/cors": "^3.0.0",
     "koa-bodyparser": "^4.2.1"
   },

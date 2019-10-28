@@ -1,6 +1,6 @@
 # :zap: Nodejin
 
-### A CLI to bootstrap node projects for quick prototyping
+## A CLI to bootstrap node projects for quick prototyping
 
 ## Installation
 

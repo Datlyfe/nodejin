@@ -3,20 +3,54 @@ import execa from "execa";
 import fs from "fs";
 import gitignore from "gitignore";
 import Listr from "listr";
-import ncp from "ncp";
 import path from "path";
 import { projectInstall } from "pkg-install";
 import license from "spdx-license-list/licenses/MIT";
 import { promisify } from "util";
+import { copyFiles, getFilesByExt, compileFiles } from "./utils";
+
 const access = promisify(fs.access);
 const writeFile = promisify(fs.writeFile);
-const copy = promisify(ncp);
 const writeGitignore = promisify(gitignore.writeFile);
 
 async function copyTemplateFiles(options) {
-  await copy(options.templateDirectory, options.targetDirectory, {
-    clobber: false
-  });
+  const files = {
+    root: [
+      {
+        templates: ["package.json.ejs", ".babelrc"]
+      }
+    ],
+    src: [
+      {
+        path: "src",
+        templates: ["index.js.ejs"]
+      }
+    ],
+    graphql: [
+      {
+        path: "src",
+        condition: options.gql,
+        templates: ["graphql/resolvers.js", "graphql/schema.js"]
+      }
+    ]
+  };
+
+  try {
+    await copyFiles(files, options.templateDirectory, options.targetDirectory);
+  } catch (error) {
+    console.log(error);
+  }
+
+  const uncompiledFiles = await getFilesByExt(
+    options.targetDirectory,
+    new RegExp(".ejs$")
+  );
+
+  try {
+    await compileFiles(uncompiledFiles, options);
+  } catch (error) {
+    console.log(error);
+  }
 
   await createGitignore(options);
   await createLicense(options);
@@ -56,7 +90,7 @@ export async function nodejin(options) {
     ...options,
     targetDirectory:
       options.targetDirectory ||
-      path.relative(process.cwd(), `${options.template}-nodejin`),
+      path.join(process.cwd(), `${options.template}-nodejin`),
     email: "<email>",
     name: "<name>"
   };
