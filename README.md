@@ -1,4 +1,4 @@
-# :zap: Nodejin
+# :rocket: Nodejin
 
 ## A CLI to bootstrap node projects for quick prototyping
 
